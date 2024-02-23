@@ -4,6 +4,9 @@ use ndarray::{Array1, ArrayView1};
 use rayon::prelude::*;
 
 
+
+
+// use rayon par bridge 
 fn main() {
 
     let start = Instant::now();
@@ -18,13 +21,6 @@ fn main() {
     println!("Cosine similarity between vec1 and vec2: {}", similarity);
     println!("Time taken: {:.2?}", elapsed);
 }
-
-
-
-// hugging face embeddings 
-// openai embeddings 
-// ollama embeddings 
-
 
 
 fn cosine_similarity(vec1: &[f64], vec2: &[f64]) -> f64 {
