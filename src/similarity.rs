@@ -57,3 +57,16 @@ pub fn chebyshev_distance(a: &[f64], b: &[f64]) -> f64 {
       .fold(0.0, f64::max)
 }
 
+
+
+pub fn dot_product_distance(vec1: &[f64], vec2: &[f64]) -> f64 {
+    vec1.par_iter().zip(vec2.par_iter()).map(|(a, b)| a * b).sum()
+}
+
+
+pub fn minkowski_distance(vec1: &[f64], vec2: &[f64], p: i32) -> f64 {
+    vec1.par_iter().zip(vec2.par_iter())
+        .map(|(a, b)| (a - b).abs().powi(p))
+        .sum::<f64>()
+        .powf(1.0 / p as f64)
+}

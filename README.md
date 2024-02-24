@@ -1,13 +1,17 @@
 # SemanticSimilarity
 
-A small library designed to compute similarity/dissimilarity metrics between embeddings using distance. 
+A small library designed to compute similarity/dissimilarity metrics between embeddings using vector sdistance. 
 
 Current distance measures implemented:
-- Cosine
-- Euclidean
-- Manhattan
-- Chebyshev
-- Angular 
+- [x] Cosine 
+- [x] Euclidean
+- [x] Manhattan
+- [x] Chebyshev
+- [x] Angular 
+- [ ] Jaccard Index
+- [ ] Levenshtein 
+- [x] Minkowski
+- [x] Dot product 
 
 
 
