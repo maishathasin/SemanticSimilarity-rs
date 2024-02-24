@@ -1,5 +1,9 @@
 # Rusty Semantic Similarity 
 
+![Crates.io Version](https://img.shields.io/crates/v/semanticsimilarity_rs)
+![Crates.io Total Downloads](https://img.shields.io/crates/d/semanticsimilarity_rs)
+![Crates.io License](https://img.shields.io/crates/l/semanticsimilarity_rs)
+
 A small library designed to compute similarity/dissimilarity metrics between embeddings using vector sdistance. 
 
 Current distance measures implemented:
