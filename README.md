@@ -1,4 +1,4 @@
-# SemanticSimilarity
+# Rusty Semantic Similarity 
 
 A small library designed to compute similarity/dissimilarity metrics between embeddings using vector sdistance. 
 
@@ -17,7 +17,7 @@ Current distance measures implemented:
 
 ## Features
 - Parallel Computation: Utilizes rayon for parallel processing. 
-- Bring your own embedding: Use any embedding model to generate embeddings and compute the similarity/distance scores 
+- Bring your own embedding: Use any embedding model to generate embeddings and compute the similarity/distance scores. 
 
 
 

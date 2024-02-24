@@ -2,6 +2,9 @@
 name = "semanticsimilarity_rs"
 version = "0.1.0"
 edition = "2021"
+description = "A library designed to compute similarity/distance metrics between embeddings"
+license = "MIT"  
+
 
 [dependencies]
 rayon = "1.5.1"
