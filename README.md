@@ -1,6 +1,6 @@
 # SemanticSimilarity
 
-A small library designed to compute similarity metrics between two embeddings. 
+A small library designed to compute similarity/dissimilarity metrics between embeddings using distance. 
 
 Current distance measures implemented:
 - Cosine
