@@ -42,7 +42,7 @@ cargo add semanticsimilarity_rs
 
 ## Usage 
 ```
-use similarity_metrics::{cosine_distance, euclidean_distance, manhattan_distance, chebyshev_distance};
+use semanticsimilarity_rs::{cosine_similarity, euclidean_distance};
 
 fn main() {
 
