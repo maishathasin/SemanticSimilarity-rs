@@ -4,7 +4,7 @@
 ![Crates.io Total Downloads](https://img.shields.io/crates/d/semanticsimilarity_rs)
 ![Crates.io License](https://img.shields.io/crates/l/semanticsimilarity_rs)
 
-A small library designed to compute similarity/dissimilarity metrics between embeddings using vector sdistance. 
+A small library designed to compute similarity/dissimilarity metrics between embeddings using vector  distance. 
 
 Current distance measures implemented:
 - [x] Cosine 
