@@ -7,7 +7,7 @@
 A small library designed to compute similarity/dissimilarity metrics between embeddings using vector  distance. 
 
 Current distance measures implemented:
-- [x] Cosine 
+- [x] Cosine (handles both normalized and non-normalized vectors)
 - [x] Euclidean
 - [x] Manhattan
 - [x] Chebyshev
@@ -49,7 +49,7 @@ fn main() {
     let vec1: [f64; 3] = [1.0, 2.0, 3.0];
     let vec2: [f64; 3] = [4.0, 5.0, 6.0];
 
-    let similarity = cosine_similarity(&vec1, &vec2);
+    let similarity = cosine_similarity(&vec1, &vec2, false);
 
     println!("Cosine similarity between vec1 and vec2: {}", similarity);
 }
