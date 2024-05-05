@@ -8,3 +8,4 @@ license = "MIT"
 
 [dependencies]
 rayon = "1.5.1"
+num-traits = "0.2"

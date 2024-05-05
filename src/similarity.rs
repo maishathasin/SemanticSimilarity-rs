@@ -1,10 +1,16 @@
 use rayon::prelude::*;
 
-pub fn cosine_similarity(vec1: &[f64], vec2: &[f64]) -> f64 {
+// handle both normalized and non-normalized vectors
+pub fn cosine_similarity(vec1: &[f64], vec2: &[f64], normalized: bool) -> f64 {
     let dot_product: f64 = vec1.par_iter().zip(vec2.par_iter()).map(|(a, b)| a * b).sum();
-    let magnitude1: f64 = vec1.par_iter().map(|x| x.powi(2)).sum::<f64>().sqrt();
-    let magnitude2: f64 = vec2.par_iter().map(|x| x.powi(2)).sum::<f64>().sqrt();
-    dot_product / (magnitude1 * magnitude2)
+
+    if normalized {
+        dot_product
+    } else {
+        let magnitude1: f64 = vec1.par_iter().map(|x| x.powi(2)).sum::<f64>().sqrt();
+        let magnitude2: f64 = vec2.par_iter().map(|x| x.powi(2)).sum::<f64>().sqrt();
+        dot_product / (magnitude1 * magnitude2)
+    }
 }
 
 
@@ -45,8 +51,9 @@ pub fn pearson_correlation(vec1: &[f64], vec2: &[f64]) -> f64 {
 }
 
 
-pub fn angular_distance(vec1: &[f64], vec2: &[f64]) -> f64 {
-    let cosine_sim = crate::cosine_similarity(vec1, vec2);
+// angular distance (vec1, vec2, bool)
+pub fn angular_distance(vec1: &[f64], vec2: &[f64], normalized: bool) -> f64 {
+    let cosine_sim = cosine_similarity(vec1, vec2, normalized);
     cosine_sim.acos() / std::f64::consts::PI
 }
 
