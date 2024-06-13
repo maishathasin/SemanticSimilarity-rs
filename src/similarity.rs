@@ -28,7 +28,7 @@ pub fn manhattan_distance(vec1: &[f64], vec2: &[f64]) -> f64 {
         .sum()
 }
 
-
+// remove this 
 pub fn pearson_correlation(vec1: &[f64], vec2: &[f64]) -> f64 {
     let mean1 = vec1.par_iter().sum::<f64>() / vec1.len() as f64;
     let mean2 = vec2.par_iter().sum::<f64>() / vec2.len() as f64;
